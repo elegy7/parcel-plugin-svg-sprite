@@ -39,7 +39,7 @@ class SvgPackager extends Packager {
   async copyToDist(asset) {
     const content = await fse.readFile(asset.name);
     // generated js has format: `module.exports="/relativePath";`
-    const relativePath = asset.generated.js.split('"')[1].substr(1);
+    const relativePath = asset.generated.js.split('"')[1].replace(/\"/g, '');
     const filePath = path.resolve(this.bundler.options.outDir, relativePath);
 
     // Create sub-directories if needed
