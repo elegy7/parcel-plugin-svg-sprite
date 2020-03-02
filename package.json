@@ -1,6 +1,6 @@
 {
   "name": "@elegy7/parcel-plugin-svg-sprite",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "Fork from parcel-plugin-svg-sprite(fix some isuses)",
   "keywords": [
     "svg",
