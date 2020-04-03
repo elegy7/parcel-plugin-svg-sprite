@@ -33,7 +33,10 @@ class SvgAsset extends Asset {
     if (this.useRawAssetsBehavior()) {
       // code copied from RawAsset to copy RawAsset behavior
       // https://github.com/parcel-bundler/parcel/blob/master/packages/core/parcel-bundler/src/assets/RawAsset.js
-      const pathToAsset = urlJoin(this.options.publicURL, this.generateBundleName());
+      
+      // Elegy changed
+      // const pathToAsset = urlJoin(this.options.publicURL, this.generateBundleName());
+      const pathToAsset = this.generateBundleName();
       return [
         {
           type: 'js',
